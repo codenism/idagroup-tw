@@ -29,9 +29,10 @@ html, body {
 	vertical-align: top;
 }
 .page__wrap_side_left {
-	width: 320px;
+	width: calc(100% - 640px);
 	float: left;
 	text-align: left;
+	position: relative;
 }
 .page__wrap_side_right {
 	width: 640px;
@@ -39,6 +40,29 @@ html, body {
 	text-align: left;
 }
 /*Навигация*/
+.menu__nav_btn {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 36px;
+    height: 26px;
+    padding: 14px 10px;
+}
+.menu__nav_btn span, .menu__nav_btn span:before, .menu__nav_btn span:after {
+    cursor: pointer;
+    height: 2px;
+    width: 36px;
+    background: #96959b;
+    position: absolute;
+    display: block;
+    content: " ";
+}
+.menu__nav_btn span:before{
+	top: 13px;
+}
+.menu__nav_btn span:after{
+	bottom: -26px;
+}
 .menu__list {
 	list-style: none;
 }
@@ -106,7 +130,7 @@ html, body {
 }
 .invoice_text {
 	float: left;
-	width: 36%;
+	width: 45%;
 }
 /*Блок с данными карты*/
 .payment__card_head {
@@ -226,4 +250,114 @@ input.card__btn_pay {
 }
 input.card__btn_pay:hover {
 	background-color: #004899;
+}
+/*Изменение размеров при уменьшении ширины экрана*/
+@media screen and (max-width: 900px) {
+	.menu__item {
+		font-size: 14px;
+    	padding: 20px 10px;	
+	}
+	.payment__card {
+	    padding: 20px 16px;
+	}
+	.page__wrap {
+		margin: 40px 0;
+	}
+	.page__wrap_side_left {
+	width: calc(100% - 598px);
+}
+	.page__wrap_side_right {
+		width: 598px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.page__wrap_side_left {
+	    width: calc(100% - 56px);
+    	padding-left: 56px;
+    	background: #1f2229;
+    	height: 56px;
+	}
+	.page__wrap_side_right {
+	    width: 100%;
+	}	
+	.menu__nav_btn {
+		display: block;
+	}
+	.page__wrap {
+	    margin: 0 0 40px;
+	}
+	nav.menu {
+		display: none;
+		position: absolute;
+	    z-index: 20;
+	    right: 0;
+	    width: calc(100% - 56px);
+	}
+}
+@media screen and (max-width: 600px) {
+	.card__form > form {
+	    width: 410px;
+	    height: 224px;
+	    padding-bottom: 40px;
+	}
+	.card__form_side_front {
+	    width: 240px;
+	    padding: 12px 8px 10px;
+	}
+	.card__form label {
+		font-size: 14px;
+	}
+	.card__form input {
+		padding: 6px;
+		font-size: 14px;
+	}
+	.card__number_row_field {
+    	width: 36px;
+    }
+    .card__expiration_date select {
+	    padding: 6px;
+	    font-size: 14px;
+	}
+	.card__line {
+	    margin-top: 16px;
+	    height: 30px;
+	}
+	.card__owner_info input {
+	    width: calc(100% - 14px);
+	}
+	.card__side_row_wrap {
+	    padding: 12px 8px 10px;
+	}
+	.card__code {
+		width: 116px;
+	    margin: 0 0 50px auto;
+	}
+	.card__code input {
+	    width: calc(100% - 14px);
+	}
+	.card__form_side_back {
+		width: 256px;
+		bottom: 55px;
+	}
+	.payment__card_head_text {
+		font-size: 20px;
+	}
+	.payment__description {
+	    padding: 20px 16px 4px;
+	}
+	.payment__item_text {
+		font-size: 12px;
+	}
+	input.card__btn_pay {
+		padding: 12px 10px;
+	}
+}
+@media screen and (max-width: 440px) {
+	.card__form > form {
+	    width: 288px;
+	    height: 336px;
+	}
+	.payment__invoice_text {
+		font-size: 14px;
+	}
 }

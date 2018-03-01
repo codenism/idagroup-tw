@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./css/style.css">
+		<script src="./js/script.js"></script>
 	</head>
 	<body>
 		<div class="page">
@@ -12,13 +13,18 @@
 		<!-- Делим страницу на две части -->
 		<!-- Левая часть с навигацией -->
 				<div class="page__wrap_side_left">
-					<nav class="menu">
+					<div id="menu__nav_btn_id" class="menu__nav_btn">
+						<span></span>
+					</div>
+					<nav id="menu__id" class="menu">
 						<ul class="menu__list">
 							<li class="menu__item">Личный кабинет</li>
 							<li class="menu__item menu__item_state_active">Платежи</li>
 							<li class="menu__item">История платежей</li>
-							<li class="menu__item menu__item_extra_field">Настройки</li>
-							<li class="menu__item menu__item_extra_field menu__item_state_logout">Выйти</li>
+							<div class="menu__item_extra">
+								<li class="menu__item menu__item_extra_field">Настройки</li>
+								<li class="menu__item menu__item_extra_field menu__item_state_logout">Выйти</li>
+							</div>
 						</ul>
 					</nav>
 				</div>
