@@ -1,109 +1,145 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Idagroup TestWork	</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/style.css">
 	</head>
 	<body>
 		<div class="page">
+			<div class="page__wrap">
 		<!-- Делим страницу на две части -->
 		<!-- Левая часть с навигацией -->
-			<div class="page__wrap page__wrap_left_side">
-				<nav class="menu">
-					<ul class="menu__list">
-						<li class="menu__item">Личный кабинет</li>
-						<li class="menu__item menu__item_state_active">Платежи</li>
-						<li class="menu__item">История платежей</li>
-						<li class="menu__item">Настройки</li>
-						<li class="menu__item menu__item_state_logout">Выйти</li>
-					</ul>
-				</nav>
-			</div>
-			<!-- Правая часть с информацией о карте -->
-			<div class="page__wrap page__wrap_right_side">
-				<div class="payment__wrap">
-				<!-- Отображение информации по карте  -->
-					<div class="payment__card">
-					<!-- Блок с информацией по выставленному счету -->
-						<div class="payment__invoice_info">
-							<div class="payment__invoice_info_head">
-								Информация по оплате:
-							</div>
-							<div class="payment__invoice_info_account-number">
-								Номер счета: <span>87123658716587</span>
-							</div>
-							<div class="payment__invoice_info_sum">
-								Сумма платежа: <span>100 руб.</span>
-							</div>
-						</div>
-						<!-- Информация о карте -->
+				<div class="page__wrap_side_left">
+					<nav class="menu">
+						<ul class="menu__list">
+							<li class="menu__item">Личный кабинет</li>
+							<li class="menu__item menu__item_state_active">Платежи</li>
+							<li class="menu__item">История платежей</li>
+							<li class="menu__item menu__item_extra_field">Настройки</li>
+							<li class="menu__item menu__item_extra_field menu__item_state_logout">Выйти</li>
+						</ul>
+					</nav>
+				</div>
+				<!-- Правая часть с информацией о карте -->
+				<div class="page__wrap_side_right">
+					<div class="payment__wrap">
+					<!-- Отображение информации по карте  -->
 						<div class="payment__card">
-							<div class="payment__card_head">
-								<div class="payment__card_head_text">Данные банковской карты
+						<!-- Блок с информацией по выставленному счету -->
+							<div class="payment__invoice_info">
+								<div class="payment__invoice_text payment__invoice_info_head">
+									Информация по оплате:
+								</div>
+								<div class="payment__invoice_text payment__text_account-number">
+									<div class="invoice_text">
+										Номер счета:
+									</div>
+									<span>87123658716587</span>
+								</div>
+								<div class="payment__invoice_text payment__text_info-sum">
+									<div class="invoice_text">
+										Сумма платежа: 
+									</div>
+									<span>100 руб.</span>
+								</div>
 							</div>
-							<div class="payment__card_form">
-								<div class="card__form">
-									<form action="">
-										<!-- Лицевая сторона карты -->
-										<div class="card__form_side_front">
-											<div class="card__number">
-												<label for="card__number_field_first">Номер карты</label>
-												<div class="card__number_row">
-													<input type="text" id="card__number_field_first" class="card__number_row_field" maxlength="4" size="4" required>
-													<input type="text" id="card__number_field_second" class="card__number_row_field" maxlength="4" size="4" required>
-													<input type="text" id="card__number_field_third" class="card__number_row_field" maxlength="4" size="4" required>
-													<input type="text" id="card__number_field_fourth" class="card__number_row_field" maxlength="4" size="4" required>
+							<!-- Информация о карте -->
+							<div class="payment__card_row">
+								<div class="payment__card_head">
+									<div class="payment__card_head_text">Данные банковской карты
+									</div>
+								</div>
+								<div class="payment__card_form">
+									<div class="card__form">
+										<form action="">
+											<!-- Лицевая сторона карты -->
+											<div class="card__form_side_front">
+												<div class="card__number">
+													<label for="card__number_field_first">Номер карты</label>
+													<div class="card__number_row">
+														<input type="text" id="card__number_field_first" class="card__number_row_field" maxlength="4" size="4" required>
+														<input type="text" id="card__number_field_second" class="card__number_row_field" maxlength="4" size="4" required>
+														<input type="text" id="card__number_field_third" class="card__number_row_field" maxlength="4" size="4" required>
+														<input type="text" id="card__number_field_fourth" class="card__number_row_field" maxlength="4" size="4" required>
+													</div>
+												</div>
+												<div class="card__expiration">
+													<label for="expiration__date_month">Срок действия</label>
+													<div class="card__expiration_date">
+														<div class="card__date_month">
+															<select id="expiration__date_month">
+																<option value="1">1</option>
+																<option value="2">2</option>
+																<option value="3">3</option>
+																<option value="4">4</option>
+																<option value="5">5</option>
+																<option value="6">6</option>
+																<option value="7">7</option>
+																<option value="8">8</option>
+																<option value="9">9</option>
+																<option value="10">10</option>
+																<option value="11">11</option>
+																<option value="12">12</option>
+															</select>
+														</div>
+														<div class="card__date_year">
+															<select id="expiration__date_year">
+																<option value="2018">2018</option>
+																<option value="2019">2019</option>
+																<option value="2020">2020</option>
+																<option value="2021">2021</option>
+																<option value="2022">2022</option>
+																<option value="2023">2023</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="card__owner">
+													<div class="card__owner_info">
+														<input type="text" class="card__owner_info_field" placeholder="Держатель карты">
+													</div>
 												</div>
 											</div>
-											<div class="card__expiration">
-												<label for="expiration__date_month">Срок действия</label>
-												<div class="card__expiration_date">
-													<input type="month" id="expiration__date_month"></input>
-													<input type="year" id="expiration__date_year"></input>
+											<!-- Оборотная сторона карта -->
+											<div class="card__form_side_back">
+												<span class="card__line"></span>
+												<div class="card__side_row_wrap">
+													<div class="card__code">
+														<label for="card__code_cvv">Код CVV2/CVC2</label>
+														<input type="text" id="card__code_cvv" class="card__code_field" maxlength="3" size="3">
+													</div>
 												</div>
 											</div>
-											<div class="card__owner">
-												<div class="card__owner_info">
-													<input type="text" class="card__owner_info_field" placeholder="Держатель карты">
-												</div>
-											</div>
-										</div>
-										<!-- Оборотная сторона карта -->
-										<div class="card__form_side_back">
-											<span class="card__line"></span>
-											<div class="card__code">
-												<label for="card__code_cvv">Код CVV2/CVC2</label>
-												<input type="text" id="card__code_cvv" class="card__code_field" maxlength="3" size="3">
-											</div>
-										</div>
-										<input type="submit" value="Оплатить">
-									</form>
+											<input class="card__btn_pay" type="submit" value="Оплатить">
+										</form>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<!-- Отображение дополнительной информации -->
-					<div class="payment__description">
-						<div class="payment__text_item">
-							<p>
-								Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
-							</p>
-						</div>
-						<div class="payment__item_text">
-							<p>
-								Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
-							</p>
-						</div>
-						<div class="payment__item_text">
-							<p>
-								Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
-							</p>
-						</div>
-						<div class="payment__item_text">
-							<p>
-								Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
-							</p>
+						<!-- Отображение дополнительной информации -->
+						<div class="payment__description">
+							<div class="payment__item_text">
+								<p>
+									Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+								</p>
+							</div>
+							<div class="payment__item_text">
+								<p>
+									Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+								</p>
+							</div>
+							<div class="payment__item_text">
+								<p>
+									Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+								</p>
+							</div>
+							<div class="payment__item_text">
+								<p>
+									Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

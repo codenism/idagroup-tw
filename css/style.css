@@ -1,1 +1,229 @@
 /*styles for idagroup*/
+@font-face {
+	font-family: "OpenSansBold";
+	src: url("../fonts/OpenSansBold/OpenSansBold.eot");
+	src: url("../fonts/OpenSansBold/OpenSansBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OpenSansBold/OpenSansBold.woff") format("woff"),
+	url("../fonts/OpenSansBold/OpenSansBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	height: 100%;
+}
+/*Общий блок для двух частей контента*/
+.page {
+	min-height: 100%;
+	background-color: #101114;
+	text-align: center;
+}
+.page__wrap {
+	width: 100%;
+	max-width: 960px;
+	margin: 78px auto;
+	display: inline-block;
+	vertical-align: top;
+}
+.page__wrap_side_left {
+	width: 320px;
+	float: left;
+	text-align: left;
+}
+.page__wrap_side_right {
+	width: 640px;
+	float: left;
+	text-align: left;
+}
+/*Навигация*/
+.menu__list {
+	list-style: none;
+}
+.menu__item {
+    color: #fff;
+    background-color: #1f2229;
+    font-family: "OpenSansBold";
+    line-height: 1.2;
+    font-size: 18px;
+    padding: 28px 26px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+.menu__item:hover {
+	background-color: #2a2d37;
+}
+.menu__item_state_active {
+	background-color: #2a2d37;
+	color: #808592;
+}
+.menu__item_extra_field {
+	background-color: #191c24;
+}
+.menu__item_state_logout{
+	color: #808592;
+}
+/*Блок с информацией о карте*/
+.payment__card {
+	background-color: #f7f8f8;
+	padding: 46px 30px;
+}
+.payment__description {
+	background-color: #373c43;
+	padding: 25px 30px 16px;
+}
+/*Блок с дополнительной информацией*/
+.payment__invoice_info {
+	width: 100%;
+	max-width: 350px;
+	margin-bottom: 26px;
+}
+.payment__item_text {
+	color: #7f8591;
+	font-family: "Arial";
+	line-height: 1.2;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+/*Блок с информацией по оплате*/
+.payment__invoice_text {
+	color: #8494ab;
+	font-family: "Arial";
+	font-size: 16px;
+	line-height: 1.2;
+	margin-bottom: 8px;
+}
+.payment__invoice_info_head {
+	margin-bottom: 20px;
+}
+.payment__invoice_text > span {
+	color: #000;
+}
+.invoice_text {
+	float: left;
+	width: 36%;
+}
+/*Блок с данными карты*/
+.payment__card_head {
+	margin-bottom: 24px;
+}
+.payment__card_head_text {
+	color: #383d43;
+	font-family: "OpenSansBold";
+	line-height: 1.2;
+	font-size: 22px;
+}
+.card__form label {
+	display: block;
+	color: #8494ab;
+	font-family: "Arial";
+	font-size: 16px;
+	line-height: 1.2;
+	margin-bottom: 6px; 
+}
+.card__form > form{
+	width: 565px;
+	height: 258px;
+	position: relative;
+	padding-bottom: 64px;
+}
+.card__form input {
+    border: 1px solid #e4e9ee;
+    outline: none;
+    padding: 10px;
+    line-height: 1.2;
+    font-family: "Arial";
+    font-size: 16px;
+}
+/*Лицевая сторона карты*/
+.card__form_side_front {
+	position: absolute;
+	background-color: #f7f8f8;
+    width: 329px;
+    border-radius: 10px;
+    border: 1px solid #e4e9ee;
+    padding: 20px 16px 14px;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.card__number {
+	margin-bottom: 16px;
+}
+.card__number_row_field {
+    width: 42px;
+    text-align: left;
+    margin-right: 4px;	
+}
+.card__expiration {
+	margin-bottom: 12px;
+}
+.card__date_month {
+	display: inline-block;
+	vertical-align: middle;
+}
+.card__date_year {
+	display: inline-block;
+	vertical-align: middle;
+}
+.card__expiration_date select {
+	border: 1px solid #e4e9ee;
+    padding: 10px;
+    font-size: 16px;
+}
+/*Оборотная сторона карты*/
+.card__form_side_back {
+	position: absolute;
+	background-color: #f7f8f8;
+   	width: 368px;
+    border-radius: 10px;
+    border: 1px solid #e4e9ee;
+    z-index: 1;
+    bottom: 64px;
+    right: 0;
+}
+.card__side_row_wrap {
+    padding: 16px 15px 15px;
+}
+.card__line {
+	margin-top: 26px;
+	display: block;
+	width: 100%;
+	height: 40px;
+	background: #e4e9ee;
+}
+.card__owner_info input {
+	width: calc(100% - 22px);
+}
+.card__code {
+	width: 140px;
+    margin: 0 0 72px auto;
+}
+.card__code input {
+	width: calc(100% - 22px);
+}
+input.card__btn_pay {
+	font-family: "OpenSansBold";
+	font-size: 14px;
+	line-height: 1.2;
+	padding: 12px 10px;
+	border-radius: 20px;
+	background-color: #0057b8;
+	color: #fff;
+	position: absolute;
+    bottom: 0;
+    width: 130px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+input.card__btn_pay:hover {
+	background-color: #004899;
+}
