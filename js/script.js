@@ -20,6 +20,20 @@ function validateForm(){
 	cardNumberVal();
 	cardOwner();
 	cvvCode();
+	isValid();
+};
+function isValid(){
+	var items = document.querySelectorAll(".card__form form input");
+	var valid = true;
+	Array.from(items).forEach(function(item) {
+		if (item.classList.contains("empty")){
+			valid = false;
+		}
+	});
+	if (valid == true) {
+		document.querySelector(".payment__card_row").style.display = "none";
+		document.getElementById("payment__result").style.display = "block";
+	}
 };
 // Проверка вводимых данных для конкретного поля
 function cardNumberKey() {
@@ -123,7 +137,10 @@ function cvvCode(){
 
 // Кастомные селекты
 function customSelect(){
-
+	customSelectCreate();
+	customSelectChosen();
+	customSelectClick();
+	selectItem();
 }
 // parents
 function parents (el, cls) {
@@ -195,16 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	cvvKey();
 });
 document.addEventListener('DOMContentLoaded', function () {
-	customSelectCreate();
-});
-document.addEventListener('DOMContentLoaded', function () {
-	customSelectChosen();
-});
-document.addEventListener('DOMContentLoaded', function () {
-	customSelectClick();
-});
-document.addEventListener('DOMContentLoaded', function () {
-	selectItem();
+	customSelect();
 });
 document.addEventListener('change', function () {
 	customSelectChosen();
