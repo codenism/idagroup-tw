@@ -41,21 +41,21 @@ html, body {
 }
 /*Навигация*/
 .menu__nav_btn {
-    display: none;
-    position: absolute;
-    left: 0;
-    width: 36px;
-    height: 26px;
-    padding: 14px 10px;
+	display: none;
+	position: absolute;
+	left: 0;
+	width: 36px;
+	height: 26px;
+	padding: 14px 10px;
 }
 .menu__nav_btn span, .menu__nav_btn span:before, .menu__nav_btn span:after {
-    cursor: pointer;
-    height: 2px;
-    width: 36px;
-    background: #96959b;
-    position: absolute;
-    display: block;
-    content: " ";
+	cursor: pointer;
+	height: 2px;
+	width: 36px;
+	background: #96959b;
+	position: absolute;
+	display: block;
+	content: " ";
 }
 .menu__nav_btn span:before{
 	top: 13px;
@@ -67,17 +67,17 @@ html, body {
 	list-style: none;
 }
 .menu__item {
-    color: #fff;
-    background-color: #1f2229;
-    font-family: "OpenSansBold";
-    line-height: 1.2;
-    font-size: 18px;
-    padding: 28px 26px;
-    cursor: pointer;
-    -webkit-transition: background-color 0.3s ease-in-out;
-    -moz-transition: background-color 0.3s ease-in-out;
-    -o-transition: background-color 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
+	color: #fff;
+	background-color: #1f2229;
+	font-family: "OpenSansBold";
+	line-height: 1.2;
+	font-size: 18px;
+	padding: 28px 26px;
+	cursor: pointer;
+	-webkit-transition: background-color 0.3s ease-in-out;
+	-moz-transition: background-color 0.3s ease-in-out;
+	-o-transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
 }
 .menu__item:hover {
 	background-color: #2a2d37;
@@ -157,32 +157,45 @@ html, body {
 	padding-bottom: 64px;
 }
 .card__form input {
-    border: 1px solid #e4e9ee;
-    outline: none;
-    padding: 10px;
-    line-height: 1.2;
-    font-family: "Arial";
-    font-size: 16px;
+	border: 1px solid #e4e9ee;
+	outline: none;
+	padding: 10px;
+	line-height: 1.2;
+	font-family: "Arial";
+	font-size: 16px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.card__form input:focus {
+	border-color: #c1c5ca;
+}
+.card__form input.empty {
+	border-color: #ff8686;
+}
+.card__form input.filled {
+	border-color: #b7ddb7;
 }
 /*Лицевая сторона карты*/
 .card__form_side_front {
 	position: absolute;
 	background-color: #f7f8f8;
-    width: 329px;
-    border-radius: 10px;
-    border: 1px solid #e4e9ee;
-    padding: 20px 16px 14px;
-    z-index: 2;
-    top: 0;
-    left: 0;
+	width: 329px;
+	border-radius: 10px;
+	border: 1px solid #e4e9ee;
+	padding: 20px 16px 14px;
+	z-index: 2;
+	top: 0;
+	left: 0;
 }
 .card__number {
 	margin-bottom: 16px;
 }
 .card__number_row_field {
-    width: 42px;
-    text-align: left;
-    margin-right: 4px;	
+	width: 43px;
+	text-align: left;
+	margin-right: 8px;	
 }
 .card__expiration {
 	margin-bottom: 12px;
@@ -197,22 +210,88 @@ html, body {
 }
 .card__expiration_date select {
 	border: 1px solid #e4e9ee;
-    padding: 10px;
+	padding: 10px;
+	font-size: 16px;
+}
+.hidden__select {
+	display: none;
+}
+.js__select {
+	position: relative;
+	display: inline-block;
+}
+.js__select_item {
+	font-family: "Arial";
+	line-height: 1.2;
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #e4e9ee;
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	width: 50px;
+	overflow: hidden;
+}
+.js__select_item:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 16px;
+	height: 8px;
+    right: 10%;
+    top: 40%;
+	background-image: url(./../img/date_pick.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.js__select_year {
+	margin-left: 8px;
+}
+.js__select_year .js__select_item {
+	width: 60px;
+}
+.js__select_dropdown {
+	display: none;
+	position: absolute;
+	z-index: 5;
+	width: 100%;
+	height: 114px;
+	overflow: auto;
+}
+.js__select_dropdown li {
+	background: #fff;
+    font-family: "Arial";
     font-size: 16px;
+    line-height: 1.2;
+    padding: 10px;
+    border-bottom: 1px solid #e4e9ee;
+    border-left: 1px solid #e4e9ee;
+}
+.js__select_dropdown::-webkit-scrollbar-track{
+	background-color: rgba(0,0,0,0.1);
+}
+.js__select_dropdown::-webkit-scrollbar{
+	width: 6px;
+	background-color: rgba(0,0,0,0.1);
+}
+.js__select_dropdown::-webkit-scrollbar-thumb{
+	background-color: rgba(255, 255, 255, 0.5);
 }
 /*Оборотная сторона карты*/
 .card__form_side_back {
 	position: absolute;
 	background-color: #f7f8f8;
-   	width: 368px;
-    border-radius: 10px;
-    border: 1px solid #e4e9ee;
-    z-index: 1;
-    bottom: 64px;
-    right: 0;
+	width: 368px;
+	border-radius: 10px;
+	border: 1px solid #e4e9ee;
+	z-index: 1;
+	bottom: 64px;
+	right: 0;
 }
 .card__side_row_wrap {
-    padding: 16px 15px 15px;
+	padding: 16px 15px 15px;
 }
 .card__line {
 	margin-top: 26px;
@@ -226,10 +305,41 @@ html, body {
 }
 .card__code {
 	width: 140px;
-    margin: 0 0 72px auto;
+	margin: 0 0 72px auto;
 }
 .card__code input {
 	width: calc(100% - 22px);
+}
+.cvv__container {
+	position: relative;
+}
+.cvv__container span {
+	position: absolute;
+	cursor: pointer;
+	width: 26px;
+	height: 26px;
+	right: 6%;
+    top: 18%;
+	background-image: url(./../img/help_cvv.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.cvv__help_list {
+	display: none;
+	position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    bottom: -130px;
+    right: 0;
+    border-radius: 10px;
+    line-height: 1.2;
+    font-family: "Arial";
+    font-size: 16px;
+}
+.cvv__container span:hover ~ .cvv__help_list {
+	display: block;
 }
 input.card__btn_pay {
 	font-family: "OpenSansBold";
@@ -240,69 +350,70 @@ input.card__btn_pay {
 	background-color: #0057b8;
 	color: #fff;
 	position: absolute;
-    bottom: 0;
-    width: 130px;
-    cursor: pointer;
-    -webkit-transition: background-color 0.3s ease-in-out;
-    -moz-transition: background-color 0.3s ease-in-out;
-    -o-transition: background-color 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
+	bottom: 0;
+	width: 130px;
+	cursor: pointer;
+	-webkit-transition: background-color 0.3s ease-in-out;
+	-moz-transition: background-color 0.3s ease-in-out;
+	-o-transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
 }
 input.card__btn_pay:hover {
 	background-color: #004899;
 }
+
 /*Изменение размеров при уменьшении ширины экрана*/
 @media screen and (max-width: 900px) {
 	.menu__item {
 		font-size: 14px;
-    	padding: 20px 10px;	
+		padding: 20px 10px;	
 	}
 	.payment__card {
-	    padding: 20px 16px;
+		padding: 20px 16px;
 	}
 	.page__wrap {
 		margin: 40px 0;
 	}
 	.page__wrap_side_left {
-	width: calc(100% - 598px);
-}
+		width: calc(100% - 598px);
+	}
 	.page__wrap_side_right {
 		width: 598px;
 	}
 }
 @media screen and (max-width: 768px) {
 	.page__wrap_side_left {
-	    width: calc(100% - 56px);
-    	padding-left: 56px;
-    	background: #1f2229;
-    	height: 56px;
+		width: calc(100% - 56px);
+		padding-left: 56px;
+		background: #1f2229;
+		height: 56px;
 	}
 	.page__wrap_side_right {
-	    width: 100%;
+		width: 100%;
 	}	
 	.menu__nav_btn {
 		display: block;
 	}
 	.page__wrap {
-	    margin: 0 0 40px;
+		margin: 0 0 40px;
 	}
 	nav.menu {
 		display: none;
 		position: absolute;
-	    z-index: 20;
-	    right: 0;
-	    width: calc(100% - 56px);
+		z-index: 20;
+		right: 0;
+		width: calc(100% - 56px);
 	}
 }
 @media screen and (max-width: 600px) {
 	.card__form > form {
-	    width: 410px;
-	    height: 224px;
-	    padding-bottom: 40px;
+		width: 410px;
+		height: 224px;
+		padding-bottom: 40px;
 	}
 	.card__form_side_front {
-	    width: 240px;
-	    padding: 12px 8px 10px;
+		width: 240px;
+		padding: 12px 8px 10px;
 	}
 	.card__form label {
 		font-size: 14px;
@@ -312,28 +423,43 @@ input.card__btn_pay:hover {
 		font-size: 14px;
 	}
 	.card__number_row_field {
-    	width: 36px;
-    }
-    .card__expiration_date select {
-	    padding: 6px;
-	    font-size: 14px;
+		width: 36px;
+		margin-right: 4px;
+	}
+	.js__select_item {
+		padding: 6px;
+		font-size: 14px;
+	}
+	.js__select_dropdown li {
+		font-size: 14px;
+		padding: 6px;
+	}
+	.cvv__container span {
+	    width: 18px;
+	    height: 18px;
+	    right: 6%;
+	    top: 20%;
+	}
+	.card__expiration_date select {
+		padding: 6px;
+		font-size: 14px;
 	}
 	.card__line {
-	    margin-top: 16px;
-	    height: 30px;
+		margin-top: 16px;
+		height: 30px;
 	}
 	.card__owner_info input {
-	    width: calc(100% - 14px);
+		width: calc(100% - 14px);
 	}
 	.card__side_row_wrap {
-	    padding: 12px 8px 10px;
+		padding: 12px 8px 10px;
 	}
 	.card__code {
 		width: 116px;
-	    margin: 0 0 50px auto;
+		margin: 0 0 50px auto;
 	}
 	.card__code input {
-	    width: calc(100% - 14px);
+		width: calc(100% - 14px);
 	}
 	.card__form_side_back {
 		width: 256px;
@@ -343,7 +469,7 @@ input.card__btn_pay:hover {
 		font-size: 20px;
 	}
 	.payment__description {
-	    padding: 20px 16px 4px;
+		padding: 20px 16px 4px;
 	}
 	.payment__item_text {
 		font-size: 12px;
@@ -354,8 +480,8 @@ input.card__btn_pay:hover {
 }
 @media screen and (max-width: 440px) {
 	.card__form > form {
-	    width: 288px;
-	    height: 336px;
+		width: 288px;
+		height: 336px;
 	}
 	.payment__invoice_text {
 		font-size: 14px;
