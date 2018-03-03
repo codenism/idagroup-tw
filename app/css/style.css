@@ -242,7 +242,7 @@ html, body {
 	height: 8px;
     right: 10%;
     top: 40%;
-	background-image: url(./img/date_pick.png);
+	background-image: url(./../img/date_pick.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -328,7 +328,7 @@ html, body {
 	height: 26px;
 	right: 6%;
     top: 18%;
-	background-image: url(./img/help_cvv.png);
+	background-image: url(./../img/help_cvv.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
